@@ -1,0 +1,424 @@
+@charset "UTF-8";
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden;
+}
+
+/* SCROLLBAR */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "header header"
+    "about foto1"
+    "about foto2"
+    "about foto3"
+    "artista1 artista1"
+    "artista2 artista2"
+    "artista3 artista3"
+    "live live"
+    "video video"
+    "discografia discografia"
+    "photogallery photogallery"
+    "footer footer";
+}
+
+.header {
+  grid-area: header;
+  height: 100vh;
+  background-image: url(../img/cream-band-background-header.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 0%;
+}
+
+.about {
+  grid-area: about;
+  min-height: 10vh;
+  background-color: rgb(238, 213, 185);
+}
+
+.foto1 {
+  grid-area: foto1;
+}
+
+.foto2 {
+  grid-area: foto2;
+}
+
+.foto3 {
+  grid-area: foto3;
+}
+
+.artista1 {
+  grid-area: artista1;
+  min-height: 10vh;
+}
+
+.artista2 {
+  grid-area: artista2;
+  min-height: 10vh;
+}
+
+.artista3 {
+  grid-area: artista3;
+  min-height: 10vh;
+}
+
+.live {
+  grid-area: live;
+  min-height: 50vh;
+}
+
+.video {
+  grid-area: video;
+  min-height: 10vh;
+}
+
+.discografia {
+  grid-area: discografia;
+  min-height: 10vh;
+}
+
+.photogallery {
+  grid-area: photogallery;
+  min-height: 10vh;
+}
+
+.footer {
+  grid-area: footer;
+  min-height: 10vh;
+  background-color: rgb(230, 200, 146);
+}
+
+/* GRID CSS Tool */
+.pictures-area {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+
+.pictures-area figure {
+  margin-bottom: 0;
+}
+
+.pictures-area a {
+  text-decoration: none;
+}
+
+.image1 {
+  grid-area: 1 / 1 / 3 / 2;
+}
+.image2 {
+  grid-area: 1 / 2 / 2 / 3;
+}
+.image3 {
+  grid-area: 1 / 3 / 2 / 4;
+}
+.image4 {
+  grid-area: 2 / 2 / 3 / 3;
+}
+.image5 {
+  grid-area: 2 / 3 / 3 / 4;
+}
+.image6 {
+  grid-area: 1 / 4 / 3 / 5;
+}
+
+/* CUSTOM */
+h1.title {
+  color: white;
+  text-shadow: 6px 4px 5px rgba(41, 37, 35, 0.87);
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 100vh;
+  height: 100vh;
+  font-family: "Mansalva", cursive;
+  font-size: 60px;
+}
+
+.description {
+  background-color: rgb(192, 185, 171);
+}
+
+h2.about {
+  margin-bottom: 0;
+}
+
+.guitar {
+  background-image: url(../img/eric-clapton-guitar.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 35% 0%;
+  min-height: 30vh;
+}
+
+.drum {
+  background-image: url(../img/ginger-baker-drumset.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 30vh;
+}
+
+.bass {
+  background-image: url(../img/jack-bruce-bass.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 35% 0%;
+  min-height: 30vh;
+}
+
+.name {
+  color: white;
+  font-size: 35px;
+  background-color: #dfab70b4;
+}
+
+.description-artist,
+.image-artist {
+  flex: 1;
+  padding: 1rem;
+}
+
+#eric .description-artist {
+  background-color: #caa194;
+}
+
+#ginger .description-artist {
+  background-color: rgb(187, 177, 211);
+}
+
+#jack .description-artist {
+  background-color: #9bc59d;
+}
+
+.parallax {
+  background-image: url(../img/cream-old-live.jpg);
+  height: 30%;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.parallax h2 {
+  font-size: 100px;
+  letter-spacing: 4px;
+}
+
+.video-live {
+  flex: 1;
+  background-color: rgba(0, 0, 0, 1);
+}
+
+.description-live {
+  background-color: rgb(233, 187, 187);
+  flex: 1;
+  padding: 1em;
+}
+
+.studio-cd {
+  flex: 1;
+  min-height: 10vh;
+}
+
+.live-cd {
+  flex: 1;
+  min-height: 10vh;
+}
+
+.live-cd figcaption,
+.studio-cd figcaption {
+  background-color: rgb(168, 155, 155);
+  color: white;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+}
+
+.live-cd figure img,
+.studio-cd figure img {
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+figcaption h3 {
+  font-size: 15px;
+  line-height: 30px;
+  margin-bottom: 0;
+
+  font-family: "Roboto", sans-serif;
+}
+
+@keyframes rotating {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.live-cd img:hover,
+.studio-cd img:hover {
+  animation: rotating 8s linear infinite;
+}
+
+.live-cd figcaption:hover {
+  background-color: orangered;
+}
+
+.studio-cd figcaption:hover {
+  background-color: rgb(255, 145, 0);
+}
+
+#discografia .discografia-container {
+  background-color: rgb(107, 59, 59);
+}
+
+.form,
+.map {
+  flex: 1;
+}
+
+.rainbow {
+  background-image: linear-gradient(
+    to left,
+    violet,
+    indigo,
+    blue,
+    green,
+    yellow,
+    orange,
+    red
+  );
+}
+
+/* Poster for youtube */
+.live-1968 {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 */
+  overflow: auto;
+  height: 0;
+}
+.live-1968 img {
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  z-index: 20;
+  cursor: pointer;
+}
+.live-1968::after {
+  content: "";
+  position: absolute;
+  display: block;
+  background: url(../img/play-button-icon.jpg) no-repeat 0 0;
+  top: 45%;
+  left: 45%;
+  width: 46px;
+  height: 36px;
+  z-index: 30;
+  cursor: pointer;
+}
+.live-1968 iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* image poster clicked, player class added using js */
+.live-1968.player img {
+  display: none;
+}
+.live-1968.player:after {
+  display: none;
+}
+
+/*  TABLET PICCOLO */
+@media screen and (min-width: 772px) {
+  .header {
+    background-image: url(../img/cream-band.jpg);
+    background-position: 50%;
+  }
+}
+
+/* TABLET */
+@media screen and (min-width: 992px) {
+  main {
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-areas:
+      "header header header"
+      "foto1 about foto3"
+      "foto1 foto2 foto3"
+      "artista1 artista1 artista1"
+      "artista2 artista2 artista2"
+      "artista3 artista3 artista3"
+      "live live live"
+      "video video video"
+      "discografia discografia discografia"
+      "photogallery photogallery photogallery"
+      "footer footer footer";
+  }
+
+  .header {
+    background-image: url(../img/cream-band-image-tablet.jpg);
+    background-position: 5%;
+  }
+
+  .bass {
+    background-image: url(../img/jack-bruce-bass-riflesso.png);
+    background-position: 70% 0%;
+    /* transform: scaleX(-1); Potevo usare questo, ma avendo inserito l'img come background, 
+    processo lungo per staccare il testo dall'img, per cui ho optato ad inserito un'altra img ribaltata */
+  }
+}
+
+/* DESKTOP */
+@media screen and (min-width: 1201px) {
+  main {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+      "header header header"
+      "foto1 foto2 foto3"
+      "about about about"
+      "artista1 artista1 artista1"
+      "artista2 artista2 artista2"
+      "artista3 artista3 artista3"
+      "live live live"
+      "video video video"
+      "discografia discografia discografia"
+      "photogallery photogallery photogallery"
+      "footer footer footer";
+  }
+
+  .header {
+    background-image: url(../img/cream-band-desktop.jpg);
+    background-position: 5%;
+  }
+}
